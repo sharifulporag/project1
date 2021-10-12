@@ -1,0 +1,392 @@
+*{
+	box-sizing:border-box;
+	font-family: 'Fira Sans', sans-serif;
+}
+body{
+	margin:0px;
+	padding:0px;
+	
+}
+
+.nav-logo img{
+	max-width:100px;
+	height:100px;
+	border:5px solid black;
+	border-radius:50%;
+	animation-name:porag;
+	
+}
+.nav-logo img:hover{
+	border:5px solid brown;
+	
+	
+}
+.dotted-hr{
+	border:dotted 6px white;
+	border-bottom:none;
+	margin: 20px auto;
+	width: 70px;
+}
+h1{
+	font-size:25px;
+	text-align:center;
+}
+a{
+	text-decoration:none;
+	color:white;
+	font-size:12px;
+	
+}
+p{
+	font-size: 12px;
+	text-align:justify;
+}
+[class*="col-"]{
+	float:left;
+	padding:10px;
+}
+/*for mobile*/
+
+[class*="col-"]{
+	width:100%;
+}
+
+.navBar{
+	background:#40868b;
+	padding:1% 6%;
+	text-align:center;
+}
+.navBar h1{
+	
+	color:white;
+	margin:0;
+	padding-top:30px;
+	
+}
+
+.navBar-menu{
+	
+	display:flex;
+	flex-direction:column;
+	text-transform:uppercase;
+	
+}
+.navBar-menu a{
+	background-color: #0c6168;
+	border-radius: 10px;
+	margin: 7px 0px;
+	padding: 10px;
+}
+
+.navBar-menu a:hover{
+	background:gray;
+}
+.navBar::after{
+	content:"";
+	display:table;
+	clear:both;
+}
+/*navbar design end*/
+
+.profile{
+	padding:130px 10px;
+	position:relative;
+	text-align:center;
+}
+.profile .top-photo{
+	position:absolute;
+	right:60px;
+	top: 20px;
+	width:100px;
+	height:100px;
+	transition: transform 2s;
+}
+.profile .top-photo:hover{
+	transform: rotate(5000deg);
+}
+
+
+
+.profile h1{
+	font-family: 'Satisfy', cursive;
+	font-size:30px;
+}
+.profile p{
+	color:gray;
+	text-align:center;
+	width:90%;
+	margin:0 auto 20px auto;
+}
+.profile .bottom-photo{
+	position:absolute;
+	left:60px;
+	width:100px;
+	height:100px;
+	bottom:10px;
+	transition: transform 2s;
+} 
+.profile .bottom-photo:hover{
+	transform: rotate(5000deg);
+} 
+profile::after{
+	display:table;
+	content:'';
+	clear:both;
+}
+h2{
+	font-size:15px;
+	text-align:center;
+}
+
+
+
+
+/*about section start*/
+
+.about-me{
+	background-color:#39a4ac;
+	padding: 1% 7%;
+	color: white;
+	text-align;center;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+}
+.aboutme-image{
+	text-align:center;
+	
+}
+.aboutme-image img{
+	border: 5px solid white;
+	border-radius: 50%;
+	height: 220px;
+	width: 200px;
+	margin-left:110px;
+}
+.about-me p{
+	text-align:center;
+}
+
+.about-me a{
+	font-size: 12px;
+}
+.cv-button{
+	background-color: #052d2f;
+	color: white;
+	border:none;
+	border-radius: 12px;
+	padding: 15px;
+	font-size: 10px;
+	cursor:pointer;
+	text-align:center;
+	margin: 10px;
+	margin-left: 175px;
+}
+
+/*about section end*/
+
+/*Profecional experiance start*/
+
+.experience-section{
+	padding: 1% 0%;
+}
+
+
+.experience-section .card{
+	background:#839e9e;
+	border-radius:5px;
+	padding:10px;
+	width: 100%;
+	margin-top: 20px;
+	height: 575px;
+}
+
+.card-icon img{
+	width: 50px;
+	height: 50px;
+	border-radius:50%;
+	border: 3px solid red;
+}
+.card-icon{
+	text-align:center;
+}
+.card:hover{
+	    box-shadow: 0px 2px 5px 4px black;
+}
+.card-title{
+	background:gray;
+	padding: 5px;
+}
+
+
+.skill-container{
+	padding-right:45px;
+}
+.skill-container li{
+	list-style:none;
+	font-weight: bolder;
+	margin: 30px 10px;
+	position:relative;
+	text-transform:uppercase;
+}
+.skill-container li::before{
+	content:'';
+	position:absolute;
+	background-color: gray;
+	width: 100%;
+	height: 10px;
+	border-radius: 5px;
+	top: calc(100% + 5px);
+	left:0px;
+} 
+.skill-container li::after{
+	content:'';
+	position:absolute;
+	background-color: #dfb2b2;
+	width: 0%;
+	height: 10px;
+	border-radius: 5px;
+	top: calc(100% + 5px);
+	left:0px;
+	
+	
+	animation-duration: 3s;
+	animation-delay: 1s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 2;
+} 
+
+	
+
+.skill-container li.html::after{
+	animation-name: html;
+}
+@keyframes html{
+	to{
+		width:90%;
+	}
+}
+.skill-container li.css::after{
+	animation-name: css;
+}
+@keyframes css{
+	to{
+		width:70%;
+	}
+}
+.skill-container li.bootstrap::after{
+	animation-name: bootstrap;
+}
+@keyframes bootstrap{
+	to{
+		width:95%;
+	}
+}
+.skill-container li.js::after{
+	animation-name: js;
+}
+@keyframes js{
+	to{
+		width:75%;
+	}
+}
+.skill-container li.jquery::after{
+	animation-name: jquery;
+}
+@keyframes jquery{
+	to{
+		width:86%;
+	}
+}
+.skill-container li.node::after{
+	animation-name: node;
+}
+@keyframes node{
+	to{
+		width:65%;
+	}
+}
+.skill-container li.react::after{
+	animation-name: react;
+}
+@keyframes react{
+	to{
+		width:60%;
+	}
+}
+
+.experience-section::before{
+	clear:both;
+	content:'';
+	display: table;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Profecional experiance end*/
+
+
+/*acivement section style start*/
+
+
+
+
+
+.footer{
+	padding: 1% 7%;
+}
+.container{
+	background-color: red;
+}
+
+
+/*acivement section style end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
